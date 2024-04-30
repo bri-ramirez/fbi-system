@@ -4,8 +4,6 @@ import { errorMessage } from '../helpers/message.js';
 import { validateLogin } from '../helpers/validate.js';
 import jwt from 'jsonwebtoken';
 
-import UserService from '../services/agente.service.js';
-
 const secretKey = process.env.SECRET_KEY;
 const tokenOptions = { expiresIn: '120s' };
 

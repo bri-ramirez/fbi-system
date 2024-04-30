@@ -8,7 +8,7 @@ loginForm.addEventListener('submit', async (event) => {
   try {
     const response = await fetch(`/SignIn?email=${email}&password=${password}`);
     const data = await response.json();
-    console.log("DATA", data);
+    
     if (data.token) {
       sessionStorage.setItem('token', data.token);
       sessionStorage.setItem('agente', JSON.stringify(data.loggedUser));
