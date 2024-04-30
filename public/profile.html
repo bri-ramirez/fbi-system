@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FBI System</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <h1>&#128374; FBI System &#128374;</h1>
+    <div class="card bg-dark text-center">
+      <div class="card-header">
+        <h5 class="card-title text-center">Bienvenido</h5> 
+      </div>
+      <div class="card-body">
+        <p>Email: <span id="agente-email"></span></p>
+      </div>
+    </div>
+    <script>
+      const agente = JSON.parse(sessionStorage.getItem('agente')); 
+      console.log(agente);
+      document.getElementById('agente-email').innerText = agente.email;
+    </script>
+  </body>
