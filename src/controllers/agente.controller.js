@@ -35,6 +35,11 @@ export const login = async (req, res) => {
     return res.status(500).json({ message: error.message });
   }
 };
+
+export const home = async (req, res) => {
+  res.sendFile('home.html', { root: './public' });
+};
+
 export const profile = async (req, res) => {
   res.sendFile('profile.html', { root: './public' });
 };

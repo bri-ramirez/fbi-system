@@ -12,22 +12,13 @@
   </head>
   <body>
     <h1>&#128374; FBI System &#128374;</h1>
-    <div class="card bg-dark text-center">
-      <div class="card-header">
-        <h5 class="card-title text-center">Perfil</h5> 
-      </div>
-      <div class="card-body">
-        <p>Email: <span id="agente-email"></span></p>
-      </div>
-      <div class="card-footer">
-        <a id="link-home" href="/home">Volver</a>
-      </div>
-    </div>
+    <h5 class="card-title text-center">Bienvenido agente: <span id="agente-email"></span> </h5>
+    <a id="link-profile" href="/profile">Perfil</a>
     <script>
       const agente = JSON.parse(sessionStorage.getItem('agente')); 
       document.getElementById('agente-email').innerText = agente.email;
-
+      
       const token = sessionStorage.getItem('token');
-      document.getElementById('link-home').href = `/home?token=${token}`;
+      document.getElementById('link-profile').href = `/profile?token=${token}`;
     </script>
   </body>
